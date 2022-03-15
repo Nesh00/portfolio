@@ -1,0 +1,51 @@
+@import url('../colours.css');
+
+.header {
+  margin-left: 3%;
+}
+
+.intro__header {
+  font-size: 4rem;
+}
+
+.intro__header--letter {
+  color: var(--text-red);
+}
+
+.intro__sub-header {
+  margin: 1rem 0 0 0.2rem;
+  font-size: 1.88rem;
+  color: var(--text-secondary);
+}
+
+@media screen and (min-width: 36.5em) {
+  .intro__header {
+    font-size: 6rem;
+  }
+
+  .intro__sub-header {
+    margin: 1rem 0 0 0.2rem;
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 76em) {
+  .header {
+    margin-left: 15%;
+  }
+
+  .intro__header {
+    font-size: 11rem;
+    font-weight: 600;
+    line-height: 100%;
+  }
+
+  .intro__sub-header {
+    margin: 3rem 0 0 0.75rem;
+    font-size: 3rem;
+  }
+
+  .intro__sub-header--slash {
+    font-size: 2.5rem;
+  }
+}
