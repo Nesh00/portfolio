@@ -1,0 +1,7 @@
+@import url('../colours.css');
+
+.nav {
+  height: 100%;
+  width: 10%;
+  background: var(--bg-color-secondary);
+}
