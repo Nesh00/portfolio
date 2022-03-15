@@ -2,12 +2,16 @@ import '../../css/Nav/Menu.css';
 
 const listItems = ['About', 'Projects', 'Contact'];
 
-const Menu = () => {
+const Menu = ({ setChangePage }) => {
+  const changePageHandler = () => {
+    setChangePage((currState) => !currState);
+  };
+
   return (
     <ul className='menu'>
       {listItems.map((listItem) => {
         return (
-          <li key={listItem} className='menu__item'>
+          <li key={listItem} className='menu__item' onClick={changePageHandler}>
             <p className='menu__link'>{listItem}</p>
           </li>
         );

@@ -7,14 +7,15 @@
   transform-style: preserve-3d;
 }
 
-#shape {
+.shape {
   position: relative;
   top: 30%;
   margin: 0 auto;
   height: 12.6rem;
   width: 12.6rem;
+  transition: 1.5s;
   transform-style: preserve-3d;
-  animation: spin 18s infinite linear;
+  animation: spin 10s infinite linear;
 }
 
 .plane {
@@ -33,7 +34,20 @@
   width: 100%;
 }
 
-#shape.backfaces .plane {
+.shape.backfaces .plane {
+  backface-visibility: visible;
+}
+
+.shape--loading {
+  margin: 0 auto;
+  height: 20rem;
+  width: 20rem;
+  transition: 1.5s;
+  transform-style: preserve-3d;
+  animation: spin 1s 3s infinite linear;
+}
+
+.shape--loading.backfaces .plane {
   backface-visibility: visible;
 }
 

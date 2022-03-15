@@ -1,30 +1,33 @@
 import '../../css/Nav/Logo.css';
 import logo from '../../images/logo.png';
 
-const Logo = () => {
+const Logo = ({ changePage }) => {
   return (
-    <section class='logo--container'>
-      <div id='shape' class='cube backfaces'>
-        <div class='plane one'></div>
-        <div class='plane two'></div>
-        <div class='plane three'></div>
-        <div class='plane four'></div>
-        <div class='plane five'></div>
-        <div class='plane six'></div>
-        <div class='plane seven'></div>
-        <div class='plane eight'>
+    <section className='logo--container'>
+      {/* <div className='shape cube backfaces'> */}
+      <div
+        className={`${changePage ? 'shape--loading' : 'shape'} cube backfaces`}
+      >
+        <div className='plane one'></div>
+        <div className='plane two'></div>
+        <div className='plane three'></div>
+        <div className='plane four'></div>
+        <div className='plane five'></div>
+        <div className='plane six'></div>
+        <div className='plane seven'></div>
+        <div className='plane eight'>
           <img src={logo} alt='Logo' />
         </div>
-        <div class='plane nine'>
+        <div className='plane nine'>
           <img src={logo} alt='Logo' />
         </div>
-        <div class='plane ten'>
+        <div className='plane ten'>
           <img src={logo} alt='Logo' />
         </div>
-        <div class='plane eleven'>
+        <div className='plane eleven'>
           <img src={logo} alt='Logo' />
         </div>
-        <div class='plane twelve'></div>
+        <div className='plane twelve'></div>
       </div>
     </section>
   );
