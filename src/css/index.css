@@ -10,12 +10,12 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--text-primary);
-  font-family: 'Fredoka', sans-serif;
-  /* font-family: 'Montserrat Alternates', sans-serif; */
+  color: var(--white);
+  /* font-family: 'Fredoka', sans-serif; */
+  font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 500;
 }
 
 body {
-  background: var(--bg-color-primary);
+  background: var(--bg-colour-primary);
 }

@@ -1,0 +1,40 @@
+@import url('../colours.css');
+
+.menu {
+  margin-top: 10rem;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.menu__item {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.menu__link {
+  font-size: 2.5rem;
+  /* font-weight: 400; */
+  animation: slideLeft 0.5s ease-out;
+  transition: animation 1s, color 0.5s;
+}
+
+.menu__item:hover .menu__link {
+  color: #ff0000;
+  transition: color 0.5s;
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,6 +1,8 @@
 :root {
-  --bg-color-primary: #212121;
-  --bg-color-secondary: #1f1f1f;
-  --bg-color-ternary: #080808;
-  --text-primary: #fff;
+  --bg-colour-primary: #212121;
+  --bg-colour-secondary: #1d1c1c;
+  --bg-colour-ternary: #080808;
+  --bg-white-transparent: rgba(255, 255, 255, 0.6);
+  --border: #c0bcbc;
+  --white: #dad6d6;
 }

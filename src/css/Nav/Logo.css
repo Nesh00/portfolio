@@ -1,5 +1,6 @@
+@import url('../colours.css');
+
 .logo--container {
-  margin-top: 5rem;
   perspective: 80rem;
   perspective-origin: 50% 22.5rem;
   transition: transform 2s;
@@ -20,9 +21,9 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--white);
   border-radius: 1.2rem;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: var(--bg-white-transparent);
   transition: transform 2s, opacity 2s;
   backface-visibility: hidden;
 }
