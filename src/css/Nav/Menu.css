@@ -4,6 +4,8 @@
   margin-top: 10rem;
   list-style: none;
   border-top: 1px solid var(--border);
+  transition: animation 1s;
+  animation: slideLeft 0.5s ease-out;
 }
 
 .menu__item {
@@ -17,24 +19,11 @@
 }
 
 .menu__link {
-  font-size: 2.5rem;
-  /* font-weight: 400; */
-  animation: slideLeft 0.5s ease-out;
-  transition: animation 1s, color 0.5s;
-}
-
-.menu__item:hover .menu__link {
-  color: #ff0000;
+  font-size: 2.2rem;
   transition: color 0.5s;
 }
 
-@keyframes slideLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-4rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.menu__item:hover .menu__link {
+  color: var(--hover);
+  transition: color 0.5s;
 }

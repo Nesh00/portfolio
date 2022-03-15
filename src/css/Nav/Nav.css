@@ -2,7 +2,23 @@
 
 .nav {
   height: 100%;
-  width: 10%;
+  width: calc(100% - 5.5rem);
   background: var(--bg-colour-secondary);
-  padding-top: 5rem;
+  transition: 0.5s;
+}
+
+.hideNav {
+  width: 0;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 76em) {
+  .nav {
+    width: 12%;
+  }
+
+  .hideNav {
+    width: 0;
+    transition: 0.5s;
+  }
 }
