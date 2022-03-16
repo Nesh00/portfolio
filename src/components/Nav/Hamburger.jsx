@@ -6,6 +6,7 @@ const Hamburger = ({ setOpenMenu }) => {
   const openMenuHandler = () => {
     setOpenMenu((currState) => !currState);
   };
+
   return (
     <section className='hamburger__container'>
       <FontAwesomeIcon icon={faBars} size='3x' onClick={openMenuHandler} />
