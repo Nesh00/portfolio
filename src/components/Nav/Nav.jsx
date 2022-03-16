@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { LoaderContext } from '../../context/LoaderContext';
 import '../../css/Nav/Nav.css';
 import Hamburger from './Hamburger';
 import Logo from './Logo';
@@ -6,14 +7,23 @@ import Menu from './Menu';
 
 const Nav = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const { setIsLoaded } = useContext(LoaderContext);
+
+  const changePageHandler = () => {
+    setIsLoaded((currState) => !currState);
+
+    setTimeout(() => {
+      setIsLoaded((currState) => !currState);
+    }, 2800);
+  };
 
   return (
     <nav className={`nav ${!openMenu && 'hideNav'}`}>
       <Hamburger setOpenMenu={setOpenMenu} />
       {openMenu && (
         <>
-          <Logo />
-          <Menu />
+          <Logo changePageHandler={changePageHandler} />
+          <Menu changePageHandler={changePageHandler} />
         </>
       )}
     </nav>

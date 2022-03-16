@@ -1,26 +1,17 @@
-import { useContext } from 'react';
-import { LoaderContext } from '../../context/LoaderContext';
+import { Link } from 'react-router-dom';
 import '../../css/Nav/Menu.css';
 
-const listItems = ['About', 'Projects', 'Contact'];
+const listItems = ['Home', 'About', 'Projects', 'Contact'];
 
-const Menu = () => {
-  const { setIsLoaded } = useContext(LoaderContext);
-
-  const changePageHandler = () => {
-    setIsLoaded((currState) => !currState);
-
-    setTimeout(() => {
-      setIsLoaded((currState) => !currState);
-    }, 2800);
-  };
-
+const Menu = ({ changePageHandler }) => {
   return (
     <ul className='menu'>
       {listItems.map((listItem) => {
         return (
           <li key={listItem} className='menu__item' onClick={changePageHandler}>
-            <p className='menu__link'>{listItem}</p>
+            <Link to={`${listItem.toLowerCase()}`} className='menu__link'>
+              {listItem}
+            </Link>
           </li>
         );
       })}
