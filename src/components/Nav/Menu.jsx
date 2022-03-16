@@ -1,10 +1,18 @@
+import { useContext } from 'react';
+import { LoaderContext } from '../../context/LoaderContext';
 import '../../css/Nav/Menu.css';
 
 const listItems = ['About', 'Projects', 'Contact'];
 
-const Menu = ({ setChangePage }) => {
+const Menu = () => {
+  const { setIsLoaded } = useContext(LoaderContext);
+
   const changePageHandler = () => {
-    setChangePage((currState) => !currState);
+    setIsLoaded((currState) => !currState);
+
+    setTimeout(() => {
+      setIsLoaded((currState) => !currState);
+    }, 2800);
   };
 
   return (

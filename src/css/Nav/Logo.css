@@ -1,7 +1,7 @@
 @import url('../colours.css');
 
 .logo--container {
-  perspective: 70rem;
+  perspective: 80rem;
   perspective-origin: 50% 22.5rem;
   transition: transform 2s;
   transform-style: preserve-3d;
@@ -18,13 +18,22 @@
   animation: spin 10s infinite linear;
 }
 
+.shape--loading {
+  margin: 0 auto;
+  height: 20rem;
+  width: 20rem;
+  transition: 1.5s;
+  transform-style: preserve-3d;
+  animation: spin 1s infinite linear;
+}
+
 .plane {
   position: absolute;
   height: 100%;
   width: 100%;
   border: 1px solid var(--white);
   border-radius: 1.2rem;
-  background-color: var(--bg-white-transparent);
+  background: var(--bg-white-transparent);
   transition: transform 2s, opacity 2s;
   backface-visibility: hidden;
 }
@@ -36,15 +45,6 @@
 
 .shape.backfaces .plane {
   backface-visibility: visible;
-}
-
-.shape--loading {
-  margin: 0 auto;
-  height: 20rem;
-  width: 20rem;
-  transition: 1.5s;
-  transform-style: preserve-3d;
-  animation: spin 1s 3s infinite linear;
 }
 
 .shape--loading.backfaces .plane {
@@ -104,7 +104,7 @@
 }
 
 .cube > .twelve {
-  transform: scale3d(0.4, 0.4, 0.4) rotateX(-90deg) translateZ(11rem);
+  transform: scale3d(0.4, 0.4, 0.4) rotateX(-90deg) translateZ(10rem);
 }
 
 @keyframes spin {

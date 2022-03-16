@@ -1,12 +1,15 @@
+import { useContext } from 'react';
+import { LoaderContext } from '../../context/LoaderContext';
 import '../../css/Nav/Logo.css';
 import logo from '../../images/logo.png';
 
-const Logo = ({ changePage }) => {
+const Logo = () => {
+  const { isLoaded } = useContext(LoaderContext);
+
   return (
     <section className='logo--container'>
-      {/* <div className='shape cube backfaces'> */}
       <div
-        className={`${changePage ? 'shape--loading' : 'shape'} cube backfaces`}
+        className={`${isLoaded ? 'shape--loading' : 'shape'} cube backfaces`}
       >
         <div className='plane one'></div>
         <div className='plane two'></div>
