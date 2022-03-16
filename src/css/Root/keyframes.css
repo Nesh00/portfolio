@@ -1,0 +1,58 @@
+/* LOADER */
+@keyframes slidePage {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* LOGO */
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+/* SCANNER */
+@keyframes scan {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(21rem);
+  }
+
+  40% {
+    transform: translateY(27rem);
+  }
+
+  60% {
+    transform: translateY(33rem);
+  }
+
+  80% {
+    transform: translateY(41.1rem);
+  }
+
+  100% {
+    transform: translateY(50rem);
+  }
+}
+
+/* DOTS/TARGETS */
+@keyframes showTarget {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

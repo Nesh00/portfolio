@@ -1,4 +1,4 @@
-@import url('./Root/base.css');
+@import url('./Root/keyframes.css');
 
 .loader {
   display: flex;
@@ -9,16 +9,6 @@
   margin-left: 13%;
   background: var(--bg-colour-ternary);
   animation: slidePage 1.4s 2 alternate backwards;
-}
-
-@keyframes slidePage {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
-  }
 }
 
 .loader__text {

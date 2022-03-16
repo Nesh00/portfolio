@@ -1,5 +1,3 @@
-@import url('../Root/base.css');
-
 .hamburger__container {
   display: flex;
   justify-content: end;

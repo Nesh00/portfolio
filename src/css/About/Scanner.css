@@ -1,0 +1,123 @@
+@import url('../Root/keyframes.css');
+
+.scanner__container {
+  display: none;
+}
+
+@media screen and (min-width: 76em) {
+  .scanner__container {
+    height: 55rem;
+    width: 55rem;
+    position: relative;
+    display: block;
+    border-left: 2px double var(--border);
+    border-right: 2px solid var(--border);
+  }
+
+  .scanner {
+    width: 54.5rem;
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    animation: scan 10s 1s infinite alternate;
+    border-left: 2px double var(--border);
+    border-right: 2px solid var(--border);
+    border-radius: 0.5rem;
+  }
+
+  .eyes,
+  .nose,
+  .mouth,
+  .chin {
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55rem;
+    height: 5rem;
+    padding-right: 1rem;
+  }
+
+  .eyes {
+    top: 21rem;
+    padding-right: 0;
+  }
+
+  .nose {
+    top: 27rem;
+  }
+
+  .mouth {
+    top: 33rem;
+  }
+
+  .chin {
+    top: 40rem;
+    padding: 2rem 0.5rem 0 0;
+  }
+
+  .dot {
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid var(--border);
+    border-radius: 20%;
+    opacity: 1;
+    animation: showTarget 1.5s backwards;
+  }
+
+  .dot--eyes {
+    animation-delay: 2.2s;
+  }
+
+  .dot--nose {
+    animation-delay: 4.2s;
+  }
+
+  .dot--mouth {
+    animation-delay: 6.2s;
+  }
+
+  .dot--chin {
+    animation-delay: 8.2s;
+  }
+
+  .eyes .dot {
+    margin: 5.5rem;
+  }
+
+  .dot::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -40%;
+    display: block;
+    width: 180%;
+    height: 1%;
+    background: var(--border);
+  }
+
+  .dot::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    display: block;
+    width: 1%;
+    height: 150%;
+    background: var(--border);
+  }
+
+  .about__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    clip-path: circle(70.1% at 52% 30%);
+    filter: brightness(0.8);
+  }
+}

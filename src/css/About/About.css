@@ -1,0 +1,8 @@
+@media screen and (min-width: 76em) {
+  .about {
+    margin: 0 5% 0 15%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
