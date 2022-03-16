@@ -1,5 +1,5 @@
-import '../../css/Main/Main.css';
-import Home from './Home';
+import '../css/Main.css';
+import Home from './Home/Home';
 
 const Main = () => {
   return (

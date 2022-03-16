@@ -1,4 +1,4 @@
-@import url('../colours.css');
+@import url('../Root/base.css');
 
 .hamburger__container {
   display: flex;

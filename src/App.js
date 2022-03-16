@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { LoaderContext } from './context/LoaderContext';
-import './css/App.css';
-import Main from './components/Main/Main';
+import './css/Root/App.css';
+import Main from './components/Main';
 import Nav from './components/Nav/Nav';
 import Loader from './components/Loader';
-import Home from './components/Main/Home';
+import Home from './components/Home/Home';
 import About from './components/About/About';
 
 function App() {

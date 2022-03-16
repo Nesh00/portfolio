@@ -1,4 +1,4 @@
-@import url('./colours.css');
+@import url('./Root/base.css');
 
 .loader {
   display: flex;
