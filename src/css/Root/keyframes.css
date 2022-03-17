@@ -26,11 +26,11 @@
   }
 
   20% {
-    transform: translateY(21rem);
+    transform: translateY(12rem);
   }
 
   40% {
-    transform: translateY(27rem);
+    transform: translateY(25rem);
   }
 
   60% {
@@ -38,7 +38,7 @@
   }
 
   80% {
-    transform: translateY(41.1rem);
+    transform: translateY(42.1rem);
   }
 
   100% {

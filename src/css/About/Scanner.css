@@ -6,118 +6,90 @@
 
 @media screen and (min-width: 76em) {
   .scanner__container {
-    height: 55rem;
-    width: 55rem;
-    position: relative;
     display: block;
-    border-left: 2px double var(--border);
-    border-right: 2px solid var(--border);
+    position: relative;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .about__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   .scanner {
-    width: 54.5rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
     height: 5rem;
-    background-color: rgba(255, 255, 255, 0.15);
-    animation: scan 10s 1s infinite alternate;
-    border-left: 2px double var(--border);
+    background: rgba(255, 255, 255, 0.15);
+    border-left: 2px solid var(--border);
     border-right: 2px solid var(--border);
     border-radius: 0.5rem;
+    animation: scan 8s 1s 2 alternate;
   }
 
-  .eyes,
+  .forehead,
   .nose,
-  .mouth,
+  .cheeks,
   .chin {
     position: absolute;
-    left: 0;
+    top: 12rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 55rem;
+    width: 45.5%;
     height: 5rem;
-    padding-right: 1rem;
   }
 
-  .eyes {
-    top: 21rem;
-    padding-right: 0;
+  .forehead {
+    justify-content: space-around;
   }
 
   .nose {
-    top: 27rem;
+    top: 25rem;
   }
 
-  .mouth {
+  .cheeks {
     top: 33rem;
+    padding: 0 2rem;
   }
 
   .chin {
-    top: 40rem;
-    padding: 2rem 0.5rem 0 0;
+    top: 42rem;
+    justify-content: center;
   }
 
   .dot {
     position: relative;
-    height: 3rem;
-    width: 3rem;
-    border: 1px solid var(--border);
-    border-radius: 20%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background: var(--text-red);
+    border-radius: 50%;
     opacity: 1;
     animation: showTarget 1.5s backwards;
   }
 
-  .dot--eyes {
-    animation-delay: 2.2s;
+  .forehead .dot {
+    animation-delay: 2s;
   }
 
-  .dot--nose {
-    animation-delay: 4.2s;
+  .nose .dot {
+    animation-delay: 3.5s;
   }
 
-  .dot--mouth {
-    animation-delay: 6.2s;
+  .cheeks .dot {
+    animation-delay: 5s;
   }
 
-  .dot--chin {
-    animation-delay: 8.2s;
+  .chin .dot {
+    animation-delay: 6.5s;
   }
 
-  .eyes .dot {
-    margin: 5.5rem;
-  }
-
-  .dot::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -40%;
-    display: block;
-    width: 180%;
-    height: 1%;
-    background: var(--border);
-  }
-
-  .dot::after {
-    content: '';
-    position: absolute;
-    top: -20%;
-    left: 50%;
-    display: block;
-    width: 1%;
-    height: 150%;
-    background: var(--border);
-  }
-
-  .about__img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-    clip-path: circle(70.1% at 52% 30%);
-    filter: brightness(0.8);
+  .nose .dot:nth-child(2) {
+    margin: 4rem 0.5rem 0 0;
   }
 }

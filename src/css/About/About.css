@@ -3,6 +3,15 @@
     margin: 0 5% 0 15%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+  }
+
+  .details__container {
+    margin: 0 auto;
+  }
+
+  .loading {
+    font-size: 3.5rem;
   }
 }

@@ -1,10 +1,25 @@
+import { useEffect, useState } from 'react';
 import '../../css/About/About.css';
 import Scanner from './Scanner';
 
 const About = () => {
+  const [isScanned, setIsScanned] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsScanned((currState) => !currState);
+    }, 17000);
+  }, []);
+
   return (
     <section className='about'>
-      <h1>Scanning...</h1>
+      <div className='details__container'>
+        {!isScanned ? (
+          <h1 className='loading'>Scanning . . .</h1>
+        ) : (
+          <h1 className='loading'>Scanning complete</h1>
+        )}
+      </div>
       <Scanner />
     </section>
   );
