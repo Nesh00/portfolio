@@ -8,6 +8,7 @@
   .scanner__container {
     display: block;
     position: relative;
+    margin: 0 auto;
     width: 55rem;
     height: 55rem;
   }
@@ -23,73 +24,173 @@
     top: 0;
     width: 100%;
     height: 5rem;
-    background: rgba(255, 255, 255, 0.15);
+    opacity: 0;
+    background: var(--scanner);
     border-left: 2px solid var(--border);
     border-right: 2px solid var(--border);
     border-radius: 0.5rem;
-    animation: scan 8s 1s 2 alternate;
+    animation: scan 6s 1s;
   }
 
-  .forehead,
-  .nose,
-  .cheeks,
-  .chin {
+  .name,
+  .location,
+  .info,
+  .focus {
     position: absolute;
-    top: 12rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 45.5%;
-    height: 5rem;
   }
 
-  .forehead {
-    justify-content: space-around;
+  .name {
+    top: 5%;
+    left: 20%;
   }
 
-  .nose {
-    top: 25rem;
+  .location {
+    bottom: 5%;
+    right: 10%;
   }
 
-  .cheeks {
-    top: 33rem;
-    padding: 0 2rem;
+  .info {
+    top: 42%;
+    right: 37%;
   }
 
-  .chin {
-    top: 42rem;
-    justify-content: center;
+  .focus {
+    bottom: 15%;
+    left: 28%;
   }
 
   .dot {
     position: relative;
     height: 1.5rem;
     width: 1.5rem;
-    background: var(--text-red);
-    border-radius: 50%;
     opacity: 1;
-    animation: showTarget 1.5s backwards;
+    border-radius: 50%;
+    outline: 2px solid var(--bg-red-transparent);
+    outline-offset: 3px;
+    background: var(--bg-red-transparent);
+    cursor: pointer;
+    transition: 0.4s;
+    transition-delay: 0.8s;
+    animation: showTarget 1.5s 7.2s backwards;
   }
 
-  .forehead .dot {
-    animation-delay: 2s;
+  .dot:hover {
+    background: var(--bg-green-transparent);
+    outline: 2px solid var(--bg-green-transparent);
+    outline-offset: 5px;
+    transition: 0.2s;
   }
 
-  .nose .dot {
-    animation-delay: 3.5s;
+  .dot::before,
+  .dot::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--bg-green-transparent);
+    transition: width 0.5s ease-in-out;
   }
 
-  .cheeks .dot {
-    animation-delay: 5s;
+  .dot::before {
+    transition-delay: 0.4s;
   }
 
-  .chin .dot {
-    animation-delay: 6.5s;
+  .dot:hover::before {
+    width: 3rem;
+    transition-delay: 0s;
   }
 
-  .nose .dot:nth-child(2) {
-    margin: 4rem 0.5rem 0 0;
+  .dot:hover::after {
+    width: 5rem;
+    transition-delay: 0.4s;
+  }
+
+  .name .dot::before {
+    top: -0.5rem;
+    right: 2.2rem;
+    transform: rotateZ(45deg);
+    transform-origin: bottom right;
+  }
+
+  .name .dot::after {
+    top: -2.6rem;
+    right: 4.26rem;
+  }
+
+  .location .dot::before {
+    top: -0.5rem;
+    left: 2.2rem;
+    transform: rotateZ(-45deg);
+    transform-origin: bottom left;
+  }
+
+  .location .dot::after {
+    top: -2.6rem;
+    left: 4.26rem;
+  }
+
+  .info .dot::before {
+    top: 0.5rem;
+    left: 2.4rem;
+  }
+
+  .info .dot::after {
+    bottom: 0.8rem;
+    left: 5.4rem;
+    transform: rotateZ(-90deg);
+    transform-origin: left;
+  }
+
+  .focus .dot::before {
+    top: 0.5rem;
+    right: 2.4rem;
+  }
+
+  .focus .dot::after {
+    top: 0.5rem;
+    left: -3.9rem;
+    transform: rotateZ(-90deg);
+    transform-origin: left;
+  }
+
+  .description {
+    padding: 2rem;
+    opacity: 0;
+    font-size: 2.3rem;
+    font-family: 'Fredoka', sans-serif;
+    color: var(--text-secondary);
+    border: 2px solid var(--bg-green-transparent);
+    border-radius: 0.5rem;
+    background: var(--bg-colour-ternary);
+  }
+
+  .dot:hover ~ .description {
+    opacity: 1;
+    transition: opacity 0.2s;
+    transition-delay: 0.8s;
+  }
+
+  .name .description {
+    position: absolute;
+    top: -4rem;
+    left: -32.5rem;
+  }
+
+  .location .description {
+    position: absolute;
+    bottom: -1rem;
+    right: -28rem;
+  }
+
+  .info .description {
+    position: absolute;
+    bottom: 5rem;
+    right: -32.5rem;
+  }
+
+  .focus .description {
+    position: absolute;
+    bottom: 5.5rem;
+    left: -30rem;
   }
 }

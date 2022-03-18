@@ -33,8 +33,8 @@
   width: 100%;
   border: 1px solid var(--white);
   border-radius: 1.2rem;
-  background: var(--bg-white-transparent);
-  transition: transform 2s, opacity 2s;
+  background: var(--bg-green-transparent);
+  transition: transform 2s, opacity 2s, background 1s;
   backface-visibility: hidden;
 }
 
@@ -49,6 +49,7 @@
 
 .shape--loading.backfaces .plane {
   backface-visibility: visible;
+  background: var(--bg-red-transparent);
 }
 
 .cube > .one {

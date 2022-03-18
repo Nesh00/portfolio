@@ -22,37 +22,49 @@
 /* SCANNER */
 @keyframes scan {
   0% {
+    width: 0;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
     transform: translateY(0);
   }
 
   20% {
-    transform: translateY(12rem);
-  }
-
-  40% {
-    transform: translateY(25rem);
-  }
-
-  60% {
-    transform: translateY(33rem);
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+    transform: translateY(0);
   }
 
   80% {
-    transform: translateY(42.1rem);
+    width: 100%;
+    left: 0;
+    transform: translateY(50rem);
+  }
+
+  99% {
+    width: 0;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateY(50rem);
   }
 
   100% {
+    width: 0;
+    opacity: 0;
     transform: translateY(50rem);
   }
 }
 
 /* DOTS/TARGETS */
 @keyframes showTarget {
-  0% {
+  0%,
+  4% {
     opacity: 0;
   }
-
-  100% {
+  2%,
+  10% {
     opacity: 1;
   }
 }
