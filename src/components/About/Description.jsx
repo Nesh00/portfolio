@@ -41,12 +41,11 @@ const Description = () => {
   };
 
   return (
-    <section className='img-description__container'>
+    <>
       {userBio.map((user) => {
         return (
-          <>
+          <section key={user.className}>
             <div
-              key={user.className}
               className={`${user.className} ${
                 open[user.className] && `${user.className}--open`
               }`}
@@ -64,11 +63,11 @@ const Description = () => {
                 <p className='description__text'>{user.description}</p>
               )}
             </div>
-          </>
+          </section>
         );
       })}
       <img src={myImg} alt='Profile' className='about__img' />
-    </section>
+    </>
   );
 };
 

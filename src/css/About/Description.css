@@ -1,16 +1,5 @@
 @import url('../Root/keyframes.css');
 
-.img-description__container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 30rem;
-  height: 30rem;
-  border-radius: 50%;
-  box-shadow: inset 0px 0px 40px var(--bg-green-transparent);
-  background: var(--bg-green-secondary);
-}
-
 .about__img {
   position: absolute;
   height: 30rem;
@@ -161,11 +150,6 @@
 }
 
 @media screen and (min-width: 36.5em) {
-  .img-description__container {
-    width: 40rem;
-    height: 40rem;
-  }
-
   .about__img {
     height: 40rem;
     width: 40rem;
@@ -193,11 +177,6 @@
 }
 
 @media screen and (min-width: 76em) {
-  .img-description__container {
-    width: 55rem;
-    height: 55rem;
-  }
-
   .about__img {
     height: 55rem;
     width: 55rem;

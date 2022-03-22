@@ -1,14 +1,26 @@
 .about {
   margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 40px var(--bg-green-transparent);
+  background: var(--bg-green-secondary);
+}
+
+@media screen and (min-width: 36.5em) {
+  .about {
+    width: 40rem;
+    height: 40rem;
+  }
 }
 
 @media screen and (min-width: 76em) {
   .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 11% 0 15%;
-    padding: 3rem;
+    width: 55rem;
+    height: 55rem;
   }
 }
