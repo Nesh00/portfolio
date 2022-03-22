@@ -1,0 +1,305 @@
+@import url('../Root/keyframes.css');
+
+.img-description__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 40px var(--bg-green-transparent);
+  background: var(--bg-green-secondary);
+}
+
+.about__img {
+  position: absolute;
+  height: 30rem;
+  width: 30rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.info,
+.name,
+.focus,
+.back-end,
+.other,
+.location,
+.testing,
+.front-end {
+  position: absolute;
+  z-index: 2;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 2rem var(--bg-red-transparent);
+  outline: 2px solid var(--bg-red-transparent);
+  outline-offset: 0.3rem;
+  transition: all 1s 1.5s ease-out, transform 1s ease-out,
+    background 1s 1.5s ease-out, outline 0.5s 2.5s ease;
+}
+
+.info {
+  top: 10%;
+  left: 5%;
+}
+
+.name {
+  top: -9%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.focus {
+  top: 10%;
+  right: 5%;
+}
+
+.back-end {
+  top: 50%;
+  right: -9%;
+  transform: translateY(-50%);
+}
+
+.other {
+  bottom: 10%;
+  right: 5%;
+}
+
+.location {
+  bottom: -9%;
+}
+
+.testing {
+  bottom: 10%;
+  left: 5%;
+}
+
+.front-end {
+  top: 50%;
+  left: -9%;
+  transform: translateY(-50%);
+}
+
+.info--open,
+.name--open,
+.focus--open,
+.back-end--open,
+.other--open,
+.location--open,
+.testing--open,
+.front-end--open {
+  transform: scale(20);
+  border-radius: 50%;
+  background: var(--bg-colour-ternary);
+  outline: none;
+  box-shadow: inset 0px 0px 2px var(--bg-green-transparent);
+  transition: all 1s ease-out, transform 1s 1.5s ease-out,
+    background 1s ease-out, outline 1s 1.5s ease-out;
+}
+
+.info--open,
+.name--open,
+.front-end--open {
+  top: 49%;
+  left: 48.5%;
+}
+
+.focus--open,
+.back-end--open {
+  top: 49%;
+  right: 48%;
+}
+
+.other--open,
+.location--open {
+  bottom: 48%;
+  right: 48%;
+}
+
+.testing--open {
+  bottom: 48%;
+  left: 48%;
+}
+
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  font-size: 2rem;
+  list-style: none;
+}
+
+.description__header {
+  margin-bottom: 1.5rem;
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+
+.description__text {
+  color: var(--text-secondary);
+  font-size: 1.46rem;
+}
+
+.info--open + .description,
+.name--open + .description,
+.focus--open + .description,
+.back-end--open + .description,
+.other--open + .description,
+.location--open + .description,
+.testing--open + .description,
+.front-end--open + .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 1s 2.2s;
+}
+
+@media screen and (min-width: 36.5em) {
+  .img-description__container {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .about__img {
+    height: 40rem;
+    width: 40rem;
+  }
+
+  .info--open,
+  .name--open,
+  .focus--open,
+  .back-end--open,
+  .other--open,
+  .location--open,
+  .testing--open,
+  .front-end--open {
+    transform: scale(26.5);
+  }
+
+  .description__header {
+    font-size: 2.7rem;
+  }
+
+  .description__text {
+    font-size: 1.95rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 76em) {
+  .img-description__container {
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .about__img {
+    height: 55rem;
+    width: 55rem;
+  }
+
+  .info,
+  .name,
+  .focus,
+  .back-end,
+  .other,
+  .location,
+  .testing,
+  .front-end {
+    height: 2rem;
+    width: 2rem;
+    outline-offset: 0.5rem;
+  }
+  .info {
+    left: 6%;
+  }
+
+  .name {
+    top: -8%;
+  }
+
+  .focus {
+    right: 6%;
+  }
+
+  .back-end {
+    right: -8%;
+  }
+
+  .other {
+    right: 6%;
+  }
+
+  .location {
+    bottom: -8%;
+  }
+
+  .testing {
+    left: 6%;
+  }
+
+  .front-end {
+    left: -8%;
+  }
+
+  .info--open,
+  .name--open,
+  .focus--open,
+  .back-end--open,
+  .other--open,
+  .location--open,
+  .testing--open,
+  .front-end--open {
+    transform: scale(27.7);
+  }
+
+  .info--open,
+  .name--open,
+  .front-end--open {
+    top: 49%;
+    left: 48.5%;
+  }
+
+  .focus--open,
+  .back-end--open {
+    top: 49%;
+    right: 48%;
+  }
+
+  .other--open,
+  .location--open {
+    bottom: 48%;
+    right: 48%;
+  }
+
+  .testing--open {
+    bottom: 48%;
+    left: 48%;
+  }
+
+  .description__header {
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+  }
+
+  .description__text {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+
+  .info--open + .description,
+  .name--open + .description,
+  .focus--open + .description,
+  .back-end--open + .description,
+  .other--open + .description,
+  .location--open + .description,
+  .testing--open + .description,
+  .front-end--open + .description {
+    line-height: 3.5rem;
+  }
+}

@@ -1,10 +1,10 @@
 import '../../css/About/About.css';
-import ImageDescription from './ImageDescription';
+import Description from './Description';
 
 const About = () => {
   return (
     <main className='about'>
-      <ImageDescription />
+      <Description />
     </main>
   );
 };
