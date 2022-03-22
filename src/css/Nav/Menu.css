@@ -1,9 +1,14 @@
 .menu {
   margin-top: 10rem;
   list-style: none;
-  border-top: 1px solid var(--border);
-  transition: animation 1s;
+  border-top: 1px solid var(--bg-green-transparent);
+  transition: animation 1s, border-top 0.5s;
   animation: slideLeft 0.5s ease-out;
+}
+
+.menu-red {
+  border-top: 1px solid var(--bg-red-transparent);
+  transition: border-top 0.5s;
 }
 
 .menu__item {
@@ -12,8 +17,13 @@
   height: 100%;
   width: 100%;
   padding: 3rem 0;
-  border-bottom: 1px solid var(--border);
-  cursor: pointer;
+  border-bottom: 1px solid var(--bg-green-transparent);
+  transition: border-bottom 0.5s;
+}
+
+.menu__item-red {
+  border-bottom: 1px solid var(--bg-red-transparent);
+  transition: border-bottom 0.5s;
 }
 
 .menu__link {

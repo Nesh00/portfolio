@@ -3,6 +3,7 @@
   height: 100%;
   width: calc(100% - 5.5rem);
   background: var(--bg-colour-secondary);
+  z-index: 3;
   transition: 0.5s;
 }
 
