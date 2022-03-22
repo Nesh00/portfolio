@@ -1,13 +1,11 @@
 :root {
-  --bg-colour-primary: #212121;
+  --bg-colour-primary: #111;
   --bg-colour-secondary: #1d1c1c;
   --bg-colour-ternary: #080808;
   --bg-white-transparent: rgba(255, 255, 255, 0.6);
   --bg-red-transparent: rgba(217, 38, 47, 0.6);
   --bg-green-transparent: rgba(8, 253, 253, 0.6);
-  --border: #b1acac;
   --text-primary: #dad6d6;
   --text-secondary: #b4aeae;
   --text-red: #cc3b3b;
-  --scanner: rgba(8, 253, 253, 0.15);
 }

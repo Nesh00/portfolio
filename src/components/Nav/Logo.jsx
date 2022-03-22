@@ -1,14 +1,21 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CursorContext } from '../../context/CursorContext';
 import { LoaderContext } from '../../context/LoaderContext';
 import '../../css/Nav/Logo.css';
 import logo from '../../images/logo.png';
 
 const Logo = ({ changePageHandler }) => {
   const { isLoaded } = useContext(LoaderContext);
+  const { cursorChangeHandler } = useContext(CursorContext);
 
   return (
-    <Link to={'/'} onClick={changePageHandler}>
+    <Link
+      to={'/'}
+      onClick={changePageHandler}
+      onMouseEnter={() => cursorChangeHandler('hovered')}
+      onMouseLeave={() => cursorChangeHandler('')}
+    >
       <section className='logo--container'>
         <div
           className={`${isLoaded ? 'shape--loading' : 'shape'} cube backfaces`}
