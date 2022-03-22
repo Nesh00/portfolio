@@ -1,0 +1,25 @@
+.cursor1,
+.cursor2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 2rem var(--bg-green-transparent);
+  will-change: width, height, transform, border;
+  pointer-events: none;
+}
+
+.cursor2 {
+  width: 4rem;
+  height: 4rem;
+  transition: 300ms ease-out;
+  box-shadow: inset 0px 0px 1rem var(--bg-green-transparent);
+}
+
+.hovered {
+  box-shadow: inset 0px 0px 2rem var(--bg-red-transparent);
+}
