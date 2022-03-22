@@ -14,17 +14,20 @@ const Menu = ({ changePageHandler }) => {
     <ul className={`menu ${isLoaded && 'menu-red'}`}>
       {listItems.map((listItem) => {
         return (
-          <li
+          <Link
+            to={`${listItem.toLowerCase()}`}
             key={listItem}
-            className={`menu__item ${isLoaded && 'menu__item-red'}`}
-            onClick={changePageHandler}
-            onMouseEnter={() => cursorChangeHandler('hovered')}
-            onMouseLeave={() => cursorChangeHandler('')}
+            className='menu__link'
           >
-            <Link to={`${listItem.toLowerCase()}`} className='menu__link'>
+            <li
+              className={`menu__item ${isLoaded && 'menu__item-red'}`}
+              onClick={changePageHandler}
+              onMouseEnter={() => cursorChangeHandler('hovered')}
+              onMouseLeave={() => cursorChangeHandler('')}
+            >
               {listItem}
-            </Link>
-          </li>
+            </li>
+          </Link>
         );
       })}
     </ul>
