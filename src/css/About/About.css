@@ -7,7 +7,8 @@
   width: 30rem;
   height: 30rem;
   border-radius: 50%;
-  box-shadow: inset 0px 0px 40px var(--bg-green-transparent);
+  box-shadow: inset 0px 0px 4rem var(--bg-green-transparent),
+    0px 0px 4rem var(--bg-green-transparent);
   background: var(--bg-green-secondary);
 }
 

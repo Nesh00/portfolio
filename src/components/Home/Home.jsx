@@ -1,4 +1,5 @@
 import '../../css/Home/Home.css';
+import Blackhole from './Blackhole';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         Front End <span className='intro__sub-header--slash'> / </span>Back End
         Developer
       </h2>
+      <Blackhole />
     </header>
   );
 };

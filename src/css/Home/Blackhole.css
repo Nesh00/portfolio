@@ -1,0 +1,24 @@
+.blackhole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  height: 14rem;
+  width: 14rem;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 4rem var(--bg-green-transparent),
+    0px 0px 4rem var(--bg-green-transparent);
+}
+
+.particles {
+  position: absolute;
+  z-index: -1;
+}
+
+@media screen and (min-width: 56em) {
+  .blackhole {
+    position: absolute;
+    left: 80%;
+  }
+}
