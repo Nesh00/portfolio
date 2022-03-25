@@ -17,3 +17,14 @@
     transform: rotateY(-360deg);
   }
 }
+
+/* INFO-BOARD */
+@keyframes flash {
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

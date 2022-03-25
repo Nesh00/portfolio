@@ -1,0 +1,17 @@
+@import url('./Root/keyframes.css');
+
+.info-board {
+  position: absolute;
+  top: -15rem;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  color: var(--bg-green-transparent);
+  animation: flash 1s linear 4 forwards;
+}
+
+.info-board__message {
+  margin: 0 -3rem 0 -1rem;
+  transform: rotate(90deg);
+  font-size: 1.4rem;
+}
