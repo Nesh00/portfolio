@@ -1,6 +1,6 @@
 .sliderBtns {
   position: absolute;
-  top: 30rem;
+  top: 25rem;
   right: 0;
   display: flex;
 }
@@ -29,7 +29,7 @@
 @media screen and (min-width: 36.5em) {
   .sliderBtns {
     top: 50rem;
-    right: 2rem;
+    right: -0.5rem;
   }
 
   .sliderBtn {
