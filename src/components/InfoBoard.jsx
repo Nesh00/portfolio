@@ -7,7 +7,7 @@ const InfoBoard = ({ info }) => {
     <section className='info-board'>
       <FontAwesomeIcon
         icon={faArrowDownLong}
-        size='5x'
+        size='4x'
         className='info-boar__icon'
       />
       <p className='info-board__message'>{info}</p>

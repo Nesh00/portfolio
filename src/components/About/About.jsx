@@ -5,7 +5,7 @@ import Description from './Description';
 const About = () => {
   return (
     <main className='about'>
-      <InfoBoard info={'Select'} />
+      <InfoBoard info={'select'} />
       <Description />
     </main>
   );
