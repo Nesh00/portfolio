@@ -1,14 +1,15 @@
 .sliderBtns {
   position: absolute;
-  top: 50rem;
-  right: -80rem;
+  top: 30rem;
+  right: 0;
+  display: flex;
 }
 
 .sliderBtn {
-  padding: 4rem 4rem;
+  padding: 2rem 2rem;
   background-color: transparent;
   color: var(--text-secondary);
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: none;
   border-radius: 50%;
   box-shadow: inset 0 0 3rem var(--bg-green-transparent),
@@ -18,9 +19,37 @@
 }
 
 .sliderBtn:first-child {
-  margin-right: 3rem;
+  margin-right: 1rem;
 }
 
 .sliderBtn--icon {
   color: var(--bg-green-transparent);
+}
+
+@media screen and (min-width: 36.5em) {
+  .sliderBtns {
+    top: 50rem;
+    right: 2rem;
+  }
+
+  .sliderBtn {
+    padding: 3rem 3rem;
+    font-size: 2rem;
+  }
+
+  .sliderBtn:first-child {
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 76em) {
+  .sliderBtns {
+    top: 50rem;
+    right: -80rem;
+  }
+
+  .sliderBtn {
+    padding: 4rem 4rem;
+    font-size: 2rem;
+  }
 }
