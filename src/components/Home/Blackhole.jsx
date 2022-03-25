@@ -6,7 +6,7 @@ const Blackhole = () => {
   const { width } = useWindowDimensions();
 
   const options = {
-    fpsLimit: 60,
+    fpsLimit: 100,
     detectRetina: true,
     particles: {
       color: {
@@ -63,15 +63,12 @@ const Blackhole = () => {
         y: 50,
       },
     },
-    background: {
-      color: '#000',
-    },
   };
 
   return (
     <section className='bg-blackhole'>
       <div className='blackhole'></div>
-      <Particles className='particles' id='tsparticles20' options={options} />
+      <Particles className='particles' options={options} />
     </section>
   );
 };

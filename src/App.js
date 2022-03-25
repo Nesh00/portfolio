@@ -8,6 +8,7 @@ import Loader from './components/Loader';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Cursor from './components/Cursor';
+import Projects from './components/Projects/Projects';
 
 function App() {
   const { isLoaded } = useContext(LoaderContext);
@@ -21,6 +22,7 @@ function App() {
           <Route path='/' element={<Main />} />
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/projects' element={<Projects />} />
         </Routes>
       ) : (
         <Loader />
