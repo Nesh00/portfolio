@@ -13,7 +13,7 @@ const Logo = ({ changePageHandler }) => {
     <Link
       to={'/'}
       onClick={changePageHandler}
-      onMouseEnter={() => cursorChangeHandler('hovered')}
+      onMouseEnter={() => cursorChangeHandler('cursor--select')}
       onMouseLeave={() => cursorChangeHandler('')}
     >
       <section className='logo--container'>

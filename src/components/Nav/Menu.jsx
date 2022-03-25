@@ -22,7 +22,7 @@ const Menu = ({ changePageHandler }) => {
             <li
               className={`menu__item ${isLoaded && 'menu__item-red'}`}
               onClick={changePageHandler}
-              onMouseEnter={() => cursorChangeHandler('hovered')}
+              onMouseEnter={() => cursorChangeHandler('cursor--select')}
               onMouseLeave={() => cursorChangeHandler('')}
             >
               {listItem}

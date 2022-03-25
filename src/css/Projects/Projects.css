@@ -34,39 +34,39 @@
 }
 
 .project1 {
-  transform: rotateY(0deg) translateZ(19rem);
+  transform: rotateY(0deg) translateZ(17rem);
 }
 
 .project2 {
-  transform: rotateY(40deg) translateZ(19rem);
+  transform: rotateY(40deg) translateZ(17rem);
 }
 
 .project3 {
-  transform: rotateY(80deg) translateZ(19rem);
+  transform: rotateY(80deg) translateZ(17rem);
 }
 
 .project4 {
-  transform: rotateY(120deg) translateZ(19rem);
+  transform: rotateY(120deg) translateZ(17rem);
 }
 
 .project5 {
-  transform: rotateY(160deg) translateZ(19rem);
+  transform: rotateY(160deg) translateZ(17rem);
 }
 
 .project6 {
-  transform: rotateY(200deg) translateZ(19rem);
+  transform: rotateY(200deg) translateZ(17rem);
 }
 
 .project7 {
-  transform: rotateY(240deg) translateZ(19rem);
+  transform: rotateY(240deg) translateZ(17rem);
 }
 
 .project8 {
-  transform: rotateY(280deg) translateZ(19rem);
+  transform: rotateY(280deg) translateZ(17rem);
 }
 
 .project9 {
-  transform: rotateY(320deg) translateZ(19rem);
+  transform: rotateY(320deg) translateZ(17rem);
 }
 
 .project1--open,

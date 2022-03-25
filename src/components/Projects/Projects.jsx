@@ -51,7 +51,7 @@ const Projects = () => {
                     : project.name
                 }`}
                 onClick={() => openProjectsHandler(project.name)}
-                onMouseEnter={() => cursorChangeHandler('hovered')}
+                onMouseEnter={() => cursorChangeHandler('cursor--select')}
                 onMouseLeave={() => cursorChangeHandler('')}
               >
                 {project.name}

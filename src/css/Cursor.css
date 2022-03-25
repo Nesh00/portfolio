@@ -20,6 +20,37 @@
   box-shadow: inset 0px 0px 1rem var(--bg-green-transparent);
 }
 
-.hovered {
+.cursor--open,
+.cursor--select,
+.cursor--next,
+.cursor--previous {
   box-shadow: inset 0px 0px 2rem var(--bg-red-transparent);
+}
+
+.cursor--select:last-of-type::after,
+.cursor--open:last-of-type::after,
+.cursor--next:last-of-type::after,
+.cursor--previous:last-of-type::after {
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  font-size: 1.5rem;
+  color: var(--bg-red-transparent);
+}
+
+.cursor--select:last-of-type::after {
+  content: 'select';
+}
+
+.cursor--open:last-of-type::after {
+  content: 'open';
+}
+
+.cursor--next:last-of-type::after {
+  content: 'next';
+  left: 0.5rem;
+}
+.cursor--previous:last-of-type::after {
+  content: 'previous';
+  left: -1.1rem;
 }

@@ -16,7 +16,7 @@ const Hamburger = ({ setOpenMenu }) => {
   return (
     <section
       className={`hamburger__container ${isLoaded && 'hamburger-red'}`}
-      onMouseEnter={() => cursorChangeHandler('hovered')}
+      onMouseEnter={() => cursorChangeHandler('cursor--open')}
       onMouseLeave={() => cursorChangeHandler('')}
     >
       <FontAwesomeIcon icon={faBars} size='3x' onClick={openMenuHandler} />

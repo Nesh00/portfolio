@@ -46,7 +46,7 @@ const SliderBtns = ({ projects, listRef, setOpenProjects }) => {
         className='sliderBtn'
         value='left'
         onClick={slideHandler}
-        onMouseEnter={() => cursorChangeHandler('hovered')}
+        onMouseEnter={() => cursorChangeHandler('cursor--previous')}
         onMouseLeave={() => cursorChangeHandler('')}
       >
         <FontAwesomeIcon icon={faAngleLeft} className='sliderBtn--icon' />
@@ -55,7 +55,7 @@ const SliderBtns = ({ projects, listRef, setOpenProjects }) => {
         className='sliderBtn'
         value='right'
         onClick={slideHandler}
-        onMouseEnter={() => cursorChangeHandler('hovered')}
+        onMouseEnter={() => cursorChangeHandler('cursor--next')}
         onMouseLeave={() => cursorChangeHandler('')}
       >
         <FontAwesomeIcon icon={faAngleRight} className='sliderBtn--icon' />
