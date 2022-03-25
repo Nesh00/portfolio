@@ -33,7 +33,7 @@ const SliderBtns = ({ projects, listRef, setOpenProjects }) => {
 
     setTimeout(() => {
       btn.style.opacity = '.8';
-    }, 1000);
+    }, 300);
   };
 
   useEffect(() => {
