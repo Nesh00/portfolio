@@ -20,3 +20,7 @@
 .sliderBtn:first-child {
   margin-right: 3rem;
 }
+
+.sliderBtn--icon {
+  color: var(--bg-green-transparent);
+}

@@ -1,5 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { CursorContext } from '../../context/CursorContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import '../../css/Projects/SliderBtns.css';
 
 const SliderBtns = ({ projects, listRef, setOpenProjects }) => {
@@ -47,7 +49,7 @@ const SliderBtns = ({ projects, listRef, setOpenProjects }) => {
         onMouseEnter={() => cursorChangeHandler('hovered')}
         onMouseLeave={() => cursorChangeHandler('')}
       >
-        {'<'}
+        <FontAwesomeIcon icon={faAngleLeft} className='sliderBtn--icon' />
       </button>
       <button
         className='sliderBtn'
@@ -56,7 +58,7 @@ const SliderBtns = ({ projects, listRef, setOpenProjects }) => {
         onMouseEnter={() => cursorChangeHandler('hovered')}
         onMouseLeave={() => cursorChangeHandler('')}
       >
-        {'>'}
+        <FontAwesomeIcon icon={faAngleRight} className='sliderBtn--icon' />
       </button>
     </div>
   );
