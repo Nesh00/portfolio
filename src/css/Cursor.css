@@ -21,6 +21,7 @@
 }
 
 .cursor--open,
+.cursor--close,
 .cursor--select,
 .cursor--next,
 .cursor--previous {
@@ -29,6 +30,7 @@
 
 .cursor--select:last-of-type::after,
 .cursor--open:last-of-type::after,
+.cursor--close:last-of-type::after,
 .cursor--next:last-of-type::after,
 .cursor--previous:last-of-type::after {
   position: absolute;
@@ -44,6 +46,12 @@
 
 .cursor--open:last-of-type::after {
   content: 'open';
+  left: 0.1rem;
+}
+
+.cursor--close:last-of-type::after {
+  content: 'close';
+  left: 0.1rem;
 }
 
 .cursor--next:last-of-type::after {

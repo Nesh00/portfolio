@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import '../../css/Projects/SliderBtns.css';
 
-const SliderBtns = ({ projects, listRef, setOpenProjects }) => {
+const SliderBtns = ({ projects, listRef, setSelectedProjects }) => {
   const { cursorChangeHandler } = useContext(CursorContext);
   const theta = (2 * Math.PI) / projects.length;
   const [slide, setSlide] = useState(0);
@@ -19,7 +19,7 @@ const SliderBtns = ({ projects, listRef, setOpenProjects }) => {
     }
     btn.style.opacity = '1';
 
-    setOpenProjects({
+    setSelectedProjects({
       project1: false,
       project2: false,
       project3: false,

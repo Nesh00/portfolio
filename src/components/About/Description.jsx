@@ -50,7 +50,7 @@ const Description = () => {
                 open[user.className] && `${user.className}--open`
               }`}
               onClick={() => openHandler(user.className)}
-              onMouseEnter={() => cursorChangeHandler('cursor--open')}
+              onMouseEnter={() => cursorChangeHandler('cursor--select')}
               onMouseLeave={() => cursorChangeHandler('')}
             ></div>
             <div className='description'>

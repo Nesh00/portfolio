@@ -79,6 +79,10 @@
 .project8--open,
 .project9--open {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 0.8rem;
   opacity: 1;
   transition: transform 1s 0.2s, opacity 0.5s 0.5s;
 }
@@ -117,6 +121,33 @@
 
 .project9--open {
   transform: rotateY(320deg) translateZ(40rem) translateY(-10.5rem) scale(1.5);
+}
+
+.project__links {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+}
+
+.project__link {
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: color 0.3s;
+}
+
+.project__link:hover {
+  color: var(--text-red);
+  transition: color 0.3s;
+}
+
+.project__img {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.2;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 36.5em) {
@@ -212,5 +243,17 @@
 
   .project9 {
     transform: rotateY(320deg) translateZ(40rem);
+  }
+
+  .project1--open,
+  .project2--open,
+  .project3--open,
+  .project4--open,
+  .project5--open,
+  .project6--open,
+  .project7--open,
+  .project8--open,
+  .project9--open {
+    font-size: 1.3rem;
   }
 }
