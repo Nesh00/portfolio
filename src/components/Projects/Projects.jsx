@@ -1,24 +1,14 @@
+import '../../css/Projects/Projects.css';
 import { useContext, useRef, useState } from 'react';
 import { CursorContext } from '../../context/CursorContext';
-import '../../css/Projects/Projects.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { projects } from '../../data/projects';
 import SliderBtns from './SliderBtns';
-
-const projects = [
-  { name: 'project1' },
-  { name: 'project2' },
-  { name: 'project3' },
-  { name: 'project4' },
-  { name: 'project5' },
-  { name: 'project6' },
-  { name: 'project7' },
-  { name: 'project8' },
-  { name: 'project9' },
-];
 
 const Projects = () => {
   const { cursorChangeHandler } = useContext(CursorContext);
   const projectListRef = useRef(null);
-  const [openProjects, setOpenProjects] = useState({
+  const [selectedProjects, setSelectedProjects] = useState({
     project1: false,
     project2: false,
     project3: false,
@@ -30,11 +20,54 @@ const Projects = () => {
     project9: false,
   });
 
-  const openProjectsHandler = (name) => {
-    openProjects[name] = !openProjects[name];
-    setOpenProjects((currState) => {
+  const selectedProjectHandler = (id) => {
+    selectedProjects[id] = !selectedProjects[id];
+    setSelectedProjects((currState) => {
       return { ...currState };
     });
+  };
+
+  const showProjectDetails = (project) => {
+    const img = project.name.replace(/ /g, '_').toLowerCase();
+
+    return (
+      <li
+        key={project.id}
+        className={`project ${project.id}--open`}
+        onClick={() => selectedProjectHandler(project.id)}
+        onMouseEnter={() => cursorChangeHandler('cursor--close')}
+        onMouseLeave={() => cursorChangeHandler('')}
+      >
+        {project.name}
+        <div className='project__links'>
+          <a
+            href={`${project.github}`}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='project__link'
+            onMouseEnter={() => cursorChangeHandler('cursor--open')}
+            onMouseLeave={() => cursorChangeHandler('')}
+          >
+            GitHub
+          </a>
+          <a
+            href={`${project.liveUrl}`}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='project__link'
+            onMouseEnter={() => cursorChangeHandler('cursor--open')}
+            onMouseLeave={() => cursorChangeHandler('')}
+          >
+            View Live
+          </a>
+        </div>
+        <img
+          className='project__img'
+          src={require(`../../images/projects/${img}.png`)}
+          alt=''
+        />
+      </li>
+    );
   };
 
   return (
@@ -42,16 +75,14 @@ const Projects = () => {
       <section className='projects'>
         <ul className='projects__list' ref={projectListRef}>
           {projects.map((project) => {
-            return (
+            return selectedProjects[project.id] ? (
+              showProjectDetails(project)
+            ) : (
               <li
-                key={project.name}
-                className={`project ${
-                  openProjects[project.name]
-                    ? `${project.name}--open`
-                    : project.name
-                }`}
-                onClick={() => openProjectsHandler(project.name)}
-                onMouseEnter={() => cursorChangeHandler('cursor--select')}
+                key={project.id}
+                className={`project ${project.id}`}
+                onClick={() => selectedProjectHandler(project.id)}
+                onMouseEnter={() => cursorChangeHandler('cursor--open')}
                 onMouseLeave={() => cursorChangeHandler('')}
               >
                 {project.name}
@@ -62,7 +93,7 @@ const Projects = () => {
         <SliderBtns
           projects={projects}
           listRef={projectListRef}
-          setOpenProjects={setOpenProjects}
+          setSelectedProjects={setSelectedProjects}
         />
       </section>
     </>

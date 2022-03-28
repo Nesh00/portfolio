@@ -31,6 +31,7 @@
   opacity: 0.8;
   transition: transform 1s 0.2s, opacity 0.5s;
   will-change: transform;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .project1 {
@@ -81,14 +82,18 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 2.2rem;
   font-size: 0.8rem;
   opacity: 1;
+  -webkit-font-smoothing: subpixel-antialiased;
+  backface-visibility: hidden;
   transition: transform 1s 0.2s, opacity 0.5s 0.5s;
 }
 
 .project1--open {
   transform: rotateY(0deg) translateZ(40rem) translateY(-10.5rem) scale(1.5);
+  backface-visibility: hidden;
 }
 
 .project2--open {
@@ -125,8 +130,10 @@
 
 .project__links {
   display: flex;
-  width: 90%;
   justify-content: space-evenly;
+  width: 100%;
+  margin-top: 1.5rem;
+  font-size: 0.6rem;
 }
 
 .project__link {
@@ -255,5 +262,9 @@
   .project8--open,
   .project9--open {
     font-size: 1.3rem;
+  }
+
+  .project__links {
+    font-size: 1rem;
   }
 }
