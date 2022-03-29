@@ -15,6 +15,10 @@ const Nav = () => {
     setTimeout(() => {
       setIsLoaded((currState) => !currState);
     }, 2800);
+
+    setTimeout(() => {
+      setOpenMenu((currState) => !currState);
+    }, 5000);
   };
 
   return (
