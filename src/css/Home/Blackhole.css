@@ -7,8 +7,8 @@
   height: 14rem;
   width: 14rem;
   border-radius: 50%;
-  box-shadow: inset 0px 0px 4rem var(--bg-green-transparent),
-    0px 0px 4rem var(--bg-green-transparent);
+  box-shadow: inset 0 0 4rem var(--bg-green-transparent),
+    0 0 4rem var(--bg-green-transparent);
 }
 
 .particles {
