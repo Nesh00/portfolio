@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { LoaderContext } from './context/LoaderContext';
 import './css/Root/App.css';
-import Main from './components/Main';
 import Nav from './components/Nav/Nav';
 import Loader from './components/Loader';
 import Home from './components/Home/Home';
@@ -20,11 +19,11 @@ function App() {
       <Cursor />
       {!isLoaded ? (
         <Routes>
-          <Route path='/' element={<Main />} />
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='*' element={<Home />} />
         </Routes>
       ) : (
         <Loader />
