@@ -17,7 +17,7 @@ const Nav = () => {
     }, 2800);
 
     setTimeout(() => {
-      setOpenMenu((currState) => !currState);
+      setOpenMenu(false);
     }, 4500);
   };
 
