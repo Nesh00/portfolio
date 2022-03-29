@@ -1,0 +1,12 @@
+.map {
+  display: none;
+}
+
+@media screen and (min-width: 76em) {
+  .map {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    will-change: zoom;
+  }
+}
