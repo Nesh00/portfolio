@@ -70,7 +70,8 @@ const Form = () => {
         <input
           value={number}
           required
-          type='number'
+          type='text'
+          pattern='07[0-9]{9}'
           className='contact__input'
           onChange={changeNumberHandler}
         />
