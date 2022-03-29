@@ -1,38 +1,87 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CursorContext } from '../../context/CursorContext';
 import '../../css/Contact/Form.css';
 
 const Form = () => {
   const { cursorChangeHandler } = useContext(CursorContext);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [number, setNumber] = useState('');
+  const [message, setMessage] = useState('');
+
+  const changeNameHandler = (event) => {
+    setName(event.target.value);
+  };
+  const changeEmailHandler = (event) => {
+    setEmail(event.target.value);
+  };
+  const changeNumberHandler = (event) => {
+    setNumber(event.target.value);
+  };
+  const changeMessageHandler = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const submitFormHandler = (event) => {
+    event.preventDefault();
+    console.log(name, email, number, message);
+    setName('');
+    setEmail('');
+    setNumber('');
+    setMessage('');
+  };
 
   return (
-    <form className='contact__form'>
+    <form className='contact__form' onSubmit={submitFormHandler}>
       <label
         className='contact__label'
         onMouseEnter={() => cursorChangeHandler('cursor--select')}
         onMouseLeave={() => cursorChangeHandler('')}
       >
-        name <input required type='text' className='contact__input' />
+        name
+        <input
+          value={name}
+          required
+          type='text'
+          className='contact__input'
+          onChange={changeNameHandler}
+        />
       </label>
       <label
         className='contact__label'
         onMouseEnter={() => cursorChangeHandler('cursor--select')}
         onMouseLeave={() => cursorChangeHandler('')}
       >
-        email <input required type='email' className='contact__input' />
+        email
+        <input
+          value={email}
+          required
+          type='email'
+          className='contact__input'
+          onChange={changeEmailHandler}
+        />
       </label>
       <label
         className='contact__label'
         onMouseEnter={() => cursorChangeHandler('cursor--select')}
         onMouseLeave={() => cursorChangeHandler('')}
       >
-        tel number <input required type='phone' className='contact__input' />
+        tel number
+        <input
+          value={number}
+          required
+          type='number'
+          className='contact__input'
+          onChange={changeNumberHandler}
+        />
       </label>
       <textarea
+        value={message}
         required
         className='contact__textarea'
         onMouseEnter={() => cursorChangeHandler('cursor--select')}
         onMouseLeave={() => cursorChangeHandler('')}
+        onChange={changeMessageHandler}
       ></textarea>
       <button
         className='contact__send'
