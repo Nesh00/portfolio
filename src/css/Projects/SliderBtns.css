@@ -24,6 +24,7 @@
 
 .sliderBtn--icon {
   color: var(--bg-green-transparent);
+  pointer-events: none;
 }
 
 @media screen and (min-width: 36.5em) {
