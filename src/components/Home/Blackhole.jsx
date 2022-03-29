@@ -9,6 +9,13 @@ const Blackhole = () => {
     fpsLimit: 100,
     detectRetina: true,
     particles: {
+      number: {
+        value: 8,
+        density: {
+          enable: true,
+          value_area: 300,
+        },
+      },
       color: {
         value: '#08fdfd99',
       },
@@ -51,7 +58,7 @@ const Blackhole = () => {
     },
     absorbers: {
       orbits: true,
-      destroy: true,
+      destroy: false,
       opacity: 0.5,
       size: {
         value: width < 1024 ? 50 : 65,
