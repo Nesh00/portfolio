@@ -24,7 +24,8 @@
 .cursor--close,
 .cursor--select,
 .cursor--next,
-.cursor--previous {
+.cursor--previous,
+.cursor--send {
   box-shadow: inset 0px 0px 2rem var(--bg-red-transparent);
 }
 
@@ -32,7 +33,8 @@
 .cursor--open:last-of-type::after,
 .cursor--close:last-of-type::after,
 .cursor--next:last-of-type::after,
-.cursor--previous:last-of-type::after {
+.cursor--previous:last-of-type::after,
+.cursor--send:last-of-type::after {
   position: absolute;
   bottom: -2rem;
   left: 0;
@@ -61,4 +63,9 @@
 .cursor--previous:last-of-type::after {
   content: 'previous';
   left: -1.1rem;
+}
+
+.cursor--send:last-of-type::after {
+  content: 'send';
+  left: 0.1rem;
 }
