@@ -252,25 +252,25 @@
   .info--open,
   .name--open,
   .front-end--open {
-    top: 47.5%;
-    left: 47%;
+    top: 46.5%;
+    left: 46.5%;
   }
 
   .focus--open,
   .back-end--open {
-    top: 47.5%;
-    right: 47%;
+    top: 46.5%;
+    right: 46.5%;
   }
 
   .other--open {
-    bottom: 47%;
-    right: 47%;
+    bottom: 46%;
+    right: 46%;
   }
 
   .location--open,
   .testing--open {
-    bottom: 47%;
-    left: 47%;
+    bottom: 46.5%;
+    left: 46.5%;
   }
 
   .description__header {
