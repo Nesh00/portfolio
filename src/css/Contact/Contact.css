@@ -1,7 +1,10 @@
 .contact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 100%;
   width: 100vw;
-  position: relative;
+}
+
+@media screen and (min-width: 76em) {
+  .contact {
+    position: relative;
+  }
 }

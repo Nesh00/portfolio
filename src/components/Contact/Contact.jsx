@@ -3,11 +3,15 @@ import Form from './Form';
 import Map from './Map';
 
 const Contact = () => {
+  if ('virtualKeyboard' in navigator) {
+    navigator.virtualKeyboard.overlaysContent = true;
+  }
+
   return (
-    <section className='contact'>
+    <footer className='contact'>
       <Form />
       <Map />
-    </section>
+    </footer>
   );
 };
 
