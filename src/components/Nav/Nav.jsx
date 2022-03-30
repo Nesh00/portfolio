@@ -18,7 +18,7 @@ const Nav = () => {
 
     setTimeout(() => {
       setOpenMenu(false);
-    }, 4500);
+    }, 4000);
   };
 
   return (
