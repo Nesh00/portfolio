@@ -3,7 +3,7 @@
 .projects {
   position: relative;
   width: 11rem;
-  margin: -15rem auto 0 auto;
+  margin: -16rem auto 0 auto;
   perspective: 100rem;
   perspective-origin: 50% -20rem;
 }
