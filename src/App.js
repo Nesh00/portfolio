@@ -1,7 +1,8 @@
+import './css/Root/App.css';
 import { useContext } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { LoaderContext } from './context/LoaderContext';
-import './css/Root/App.css';
+import useWindowDimensions from './hooks/useWindowDimensions';
 import Nav from './components/Nav/Nav';
 import Loader from './components/Loader';
 import Home from './components/Home/Home';
@@ -12,11 +13,12 @@ import Contact from './components/Contact/Contact';
 
 function App() {
   const { isLoaded } = useContext(LoaderContext);
+  const { width } = useWindowDimensions();
 
   return (
     <div className='app'>
       <Nav />
-      <Cursor />
+      {width > 768 && <Cursor />}
       {!isLoaded ? (
         <Routes>
           <Route path='/home' element={<Home />} />
