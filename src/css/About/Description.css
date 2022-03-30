@@ -79,10 +79,10 @@
 .testing--open,
 .front-end--open {
   transform: scale(9.4);
+  box-shadow: inset 0px 0px 2px var(--bg-green-transparent);
+  outline: none;
   border-radius: 50%;
   background: var(--bg-colour-primary);
-  outline: none;
-  box-shadow: inset 0px 0px 2px var(--bg-green-transparent);
   transition: all 1s ease-out, transform 1s 1.5s ease-out,
     background 1s ease-out, outline 1s 1.5s ease-out;
 }
@@ -116,6 +116,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 68%;
   z-index: 2;
   opacity: 0;
   font-size: 2rem;
@@ -132,6 +133,7 @@
 .description__text {
   color: var(--text-secondary);
   font-size: 1.36rem;
+  line-height: 1.8rem;
 }
 
 .info--open + .description,
