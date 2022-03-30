@@ -6,7 +6,6 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  margin-left: 13%;
   background: var(--bg-colour-ternary);
   animation: slidePage 1.4s 2 alternate backwards;
 }
