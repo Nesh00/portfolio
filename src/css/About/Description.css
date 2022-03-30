@@ -120,6 +120,7 @@
   opacity: 0;
   font-size: 2rem;
   list-style: none;
+  pointer-events: none;
 }
 
 .description__header {
