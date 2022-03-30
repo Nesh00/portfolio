@@ -80,7 +80,7 @@
 .front-end--open {
   transform: scale(9.4);
   border-radius: 50%;
-  background: var(--bg-colour-ternary);
+  background: var(--bg-colour-primary);
   outline: none;
   box-shadow: inset 0px 0px 2px var(--bg-green-transparent);
   transition: all 1s ease-out, transform 1s 1.5s ease-out,

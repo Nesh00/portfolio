@@ -27,7 +27,7 @@
   border-radius: 50%;
   box-shadow: inset 0 0 4rem var(--bg-green-transparent),
     0 0 4rem var(--bg-green-transparent);
-  background-color: var(--bg-colour-primary);
+  background: var(--bg-colour-primary);
   opacity: 0.8;
   transition: all 1s, transform 1s 0.2s, opacity 0.5s;
   will-change: transform;

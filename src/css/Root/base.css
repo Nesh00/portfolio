@@ -1,7 +1,7 @@
 :root {
-  --bg-colour-primary: #111;
+  --bg-colour-primary: #000;
   --bg-colour-secondary: #1d1c1c;
-  --bg-colour-ternary: #080808;
+  --bg-colour-ternary: #130f0f;
   --bg-white-transparent: rgba(255, 255, 255, 0.6);
   --bg-red-transparent: rgba(217, 38, 47, 0.6);
   --bg-green-transparent: rgba(8, 253, 253, 0.6);

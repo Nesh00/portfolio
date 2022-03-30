@@ -9,7 +9,6 @@
   border-radius: 50%;
   box-shadow: inset 0px 0px 4rem var(--bg-green-transparent),
     0px 0px 4rem var(--bg-green-transparent);
-  background: var(--bg-green-secondary);
 }
 
 @media screen and (min-width: 36.5em) {
