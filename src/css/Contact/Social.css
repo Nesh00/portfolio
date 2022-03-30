@@ -1,0 +1,26 @@
+.contact__social {
+  margin-top: 2rem;
+}
+
+.contact__social--icon {
+  font-size: 3rem;
+  color: var(--bg-green-transparent);
+}
+
+.contact__social--icon:not(:last-of-type) {
+  margin-right: 1.5rem;
+}
+
+@media screen and (min-width: 76em) {
+  .contact__social {
+    margin-top: 0;
+  }
+
+  .contact__social--icon {
+    font-size: 4rem;
+  }
+
+  .contact__social--icon:not(:last-of-type) {
+    margin-right: 2rem;
+  }
+}

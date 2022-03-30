@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { CursorContext } from '../../context/CursorContext';
 import '../../css/Contact/Form.css';
+import Social from './Social';
 
 const Form = () => {
   const { cursorChangeHandler } = useContext(CursorContext);
@@ -32,66 +33,69 @@ const Form = () => {
   };
 
   return (
-    <form className='contact__form' onSubmit={submitFormHandler}>
-      <label
-        className='contact__label'
-        onMouseEnter={() => cursorChangeHandler('cursor--select')}
-        onMouseLeave={() => cursorChangeHandler('')}
-      >
-        name
-        <input
-          value={name}
+    <section className='form__section'>
+      <form className='contact__form' onSubmit={submitFormHandler}>
+        <label
+          className='contact__label'
+          onMouseEnter={() => cursorChangeHandler('cursor--select')}
+          onMouseLeave={() => cursorChangeHandler('')}
+        >
+          name
+          <input
+            value={name}
+            required
+            type='text'
+            className='contact__input'
+            onChange={changeNameHandler}
+          />
+        </label>
+        <label
+          className='contact__label'
+          onMouseEnter={() => cursorChangeHandler('cursor--select')}
+          onMouseLeave={() => cursorChangeHandler('')}
+        >
+          email
+          <input
+            value={email}
+            required
+            type='email'
+            className='contact__input'
+            onChange={changeEmailHandler}
+          />
+        </label>
+        <label
+          className='contact__label'
+          onMouseEnter={() => cursorChangeHandler('cursor--select')}
+          onMouseLeave={() => cursorChangeHandler('')}
+        >
+          tel number
+          <input
+            value={number}
+            required
+            type='text'
+            pattern='07[0-9]{9}'
+            className='contact__input'
+            onChange={changeNumberHandler}
+          />
+        </label>
+        <textarea
+          value={message}
           required
-          type='text'
-          className='contact__input'
-          onChange={changeNameHandler}
-        />
-      </label>
-      <label
-        className='contact__label'
-        onMouseEnter={() => cursorChangeHandler('cursor--select')}
-        onMouseLeave={() => cursorChangeHandler('')}
-      >
-        email
-        <input
-          value={email}
-          required
-          type='email'
-          className='contact__input'
-          onChange={changeEmailHandler}
-        />
-      </label>
-      <label
-        className='contact__label'
-        onMouseEnter={() => cursorChangeHandler('cursor--select')}
-        onMouseLeave={() => cursorChangeHandler('')}
-      >
-        tel number
-        <input
-          value={number}
-          required
-          type='text'
-          pattern='07[0-9]{9}'
-          className='contact__input'
-          onChange={changeNumberHandler}
-        />
-      </label>
-      <textarea
-        value={message}
-        required
-        className='contact__textarea'
-        onMouseEnter={() => cursorChangeHandler('cursor--select')}
-        onMouseLeave={() => cursorChangeHandler('')}
-        onChange={changeMessageHandler}
-      ></textarea>
-      <button
-        className='contact__send'
-        onMouseEnter={() => cursorChangeHandler('cursor--send')}
-        onMouseLeave={() => cursorChangeHandler('')}
-      >
-        Send
-      </button>
-    </form>
+          className='contact__textarea'
+          onMouseEnter={() => cursorChangeHandler('cursor--select')}
+          onMouseLeave={() => cursorChangeHandler('')}
+          onChange={changeMessageHandler}
+        ></textarea>
+        <button
+          className='contact__send'
+          onMouseEnter={() => cursorChangeHandler('cursor--send')}
+          onMouseLeave={() => cursorChangeHandler('')}
+        >
+          Send
+        </button>
+      </form>
+      <Social />
+    </section>
   );
 };
 
