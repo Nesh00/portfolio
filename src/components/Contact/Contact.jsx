@@ -1,8 +1,12 @@
 import '../../css/Contact/Contact.css';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 import Form from './Form';
 import Map from './Map';
 
 const Contact = () => {
+  const { width } = useWindowDimensions();
+  console.log(width);
+
   if ('virtualKeyboard' in navigator) {
     navigator.virtualKeyboard.overlaysContent = true;
   }
@@ -10,7 +14,7 @@ const Contact = () => {
   return (
     <footer className='contact'>
       <Form />
-      <Map />
+      {width >= 1440 && <Map />}
     </footer>
   );
 };
