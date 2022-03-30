@@ -1,5 +1,6 @@
 .contact__social {
   margin-top: 2rem;
+  text-align: center;
 }
 
 .contact__social--icon {
@@ -9,6 +10,13 @@
 
 .contact__social--icon:not(:last-of-type) {
   margin-right: 1.5rem;
+}
+
+.contact__info {
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  color: var(--text-secondary);
+  line-height: 2.2rem;
 }
 
 @media screen and (min-width: 76em) {

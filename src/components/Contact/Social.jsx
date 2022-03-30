@@ -43,6 +43,10 @@ const Social = () => {
       >
         <FontAwesomeIcon icon={faLinkedin} className='contact__social--icon' />
       </a>
+      <div className='contact__info'>
+        <p>07979319289</p>
+        <p>c.nenad00@gmail.com</p>
+      </div>
     </section>
   );
 };
