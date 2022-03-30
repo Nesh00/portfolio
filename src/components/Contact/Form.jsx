@@ -1,35 +1,32 @@
 import { useContext, useState } from 'react';
 import { CursorContext } from '../../context/CursorContext';
+import { send } from 'emailjs-com';
 import '../../css/Contact/Form.css';
 import Social from './Social';
 
 const Form = () => {
   const { cursorChangeHandler } = useContext(CursorContext);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [number, setNumber] = useState('');
-  const [message, setMessage] = useState('');
+  const [toSend, setToSend] = useState({
+    name: '',
+    email: '',
+    number: '',
+    message: '',
+  });
 
-  const changeNameHandler = (event) => {
-    setName(event.target.value);
-  };
-  const changeEmailHandler = (event) => {
-    setEmail(event.target.value);
-  };
-  const changeNumberHandler = (event) => {
-    setNumber(event.target.value);
-  };
-  const changeMessageHandler = (event) => {
-    setMessage(event.target.value);
+  const changeHandler = (event) => {
+    setToSend({ ...toSend, [event.target.name]: event.target.value });
   };
 
   const submitFormHandler = (event) => {
     event.preventDefault();
-    console.log(name, email, number, message);
-    setName('');
-    setEmail('');
-    setNumber('');
-    setMessage('');
+
+    send('service_v3513bq', 'template_hxcpase', toSend, 'grPykzGLOJ5SfLfV5')
+      .then(() => {
+        setToSend({ name: '', email: '', number: '', message: '' });
+      })
+      .catch((err) => {
+        alert('FAILED...', err);
+      });
   };
 
   return (
@@ -42,11 +39,12 @@ const Form = () => {
         >
           name
           <input
-            value={name}
-            required
+            value={toSend.name}
+            name='name'
             type='text'
             className='contact__input'
-            onChange={changeNameHandler}
+            onChange={changeHandler}
+            required
           />
         </label>
         <label
@@ -56,11 +54,12 @@ const Form = () => {
         >
           email
           <input
-            value={email}
-            required
+            value={toSend.email}
+            name='email'
             type='email'
             className='contact__input'
-            onChange={changeEmailHandler}
+            onChange={changeHandler}
+            required
           />
         </label>
         <label
@@ -70,21 +69,23 @@ const Form = () => {
         >
           tel number
           <input
-            value={number}
-            required
+            value={toSend.number}
+            name='number'
             type='text'
             pattern='07[0-9]{9}'
             className='contact__input'
-            onChange={changeNumberHandler}
+            onChange={changeHandler}
+            required
           />
         </label>
         <textarea
-          value={message}
-          required
+          value={toSend.message}
+          name='message'
           className='contact__textarea'
           onMouseEnter={() => cursorChangeHandler('cursor--select')}
           onMouseLeave={() => cursorChangeHandler('')}
-          onChange={changeMessageHandler}
+          onChange={changeHandler}
+          required
         ></textarea>
         <button
           className='contact__send'
