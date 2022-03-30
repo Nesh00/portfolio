@@ -93,7 +93,6 @@
 
 .project1--open {
   transform: rotateY(0deg) translateZ(40rem) translateY(-10.5rem) scale(1.5);
-  backface-visibility: hidden;
 }
 
 .project2--open {
