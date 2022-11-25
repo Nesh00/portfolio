@@ -5,7 +5,6 @@ import Map from './Map';
 
 const Contact = () => {
   const { width } = useWindowDimensions();
-  console.log(width);
 
   if ('virtualKeyboard' in navigator) {
     navigator.virtualKeyboard.overlaysContent = true;

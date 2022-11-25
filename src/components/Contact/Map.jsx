@@ -7,9 +7,7 @@ import {
   ZoomableGroup,
   Marker,
 } from 'react-simple-maps';
-
-const geoUrl =
-  'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
+import * as mapFeatures from '../../data/features.json';
 
 const Map = () => {
   const [counter, setCounter] = useState(0);
@@ -24,9 +22,9 @@ const Map = () => {
 
   return (
     <ComposableMap className='map'>
-      <ZoomableGroup zoom={counter} center={[-6.844644, 54.183959]}>
+      <ZoomableGroup zoom={counter} center={[9.5746, 57.7089]}>
         <Geographies
-          geography={geoUrl}
+          geography={mapFeatures}
           fill='transparent'
           stroke={'var(--bg-green-transparent)'}
           strokeWidth={0.1}
@@ -37,7 +35,7 @@ const Map = () => {
             ))
           }
         </Geographies>
-        <Marker coordinates={[-2.244644, 53.483959]} fill='#777'>
+        <Marker coordinates={[11.9746, 57.7089]} fill='#777'>
           <circle r={0.3} fill={'var(--text-red)'} />
           <text
             x='6.8'
@@ -47,7 +45,7 @@ const Map = () => {
             fontSize={'.1rem'}
             fill={'var(--text-red)'}
           >
-            {'Manchester'}
+            {'Gothenburg'}
           </text>
         </Marker>
       </ZoomableGroup>
