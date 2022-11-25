@@ -57,8 +57,8 @@ const options = {
   },
 };
 
-const Stars = () => {
-  return <Particles options={options} className='stars' />;
-};
+const Stars = () => (
+  <Particles options={options} className='stars' />
+);
 
 export default Stars;

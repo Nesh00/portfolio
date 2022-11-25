@@ -17,8 +17,9 @@ const Description = () => {
     other: false,
   });
 
-  const openHandler = (name) => {
-    open[name] = !open[name];
+  const openHandler = (title) => {
+    open[title] = !open[title];
+    
     setOpen((currState) => {
       return { ...currState };
     });
@@ -28,13 +29,11 @@ const Description = () => {
     let descriptionList;
 
     if (Array.isArray(user.description)) {
-      descriptionList = user.description.map((listItem) => {
-        return (
-          <li key={listItem} className='description__text'>
-            {listItem}
-          </li>
-        );
-      });
+      descriptionList = user.description.map((listItem) => (
+        <li key={listItem} className='description__text'>
+          {listItem}
+        </li>
+      ));
     }
 
     return descriptionList;
@@ -42,33 +41,31 @@ const Description = () => {
 
   return (
     <>
-      {userBio.map((user) => {
-        return (
-          <section key={user.className}>
-            <div
-              className={`${user.className} ${
-                open[user.className] && `${user.className}--open`
-              }`}
-              onClick={() => openHandler(user.className)}
-              onMouseEnter={() => cursorChangeHandler('cursor--select')}
-              onMouseLeave={() => cursorChangeHandler('')}
-            ></div>
-            <div className='description'>
-              <p className='description__header'>
-                {user.className.replace(/-/g, ' ')}
-              </p>
-              {Array.isArray(user.description) ? (
-                descriptionListFn(user)
-              ) : (
-                <p className='description__text'>{user.description}</p>
-              )}
-            </div>
-          </section>
-        );
-      })}
+      {userBio.map((user) => (
+        <section key={user.title}>
+          <div
+            className={`${user.title} ${
+              open[user.title] && `${user.title}--open`
+            }`}
+            onClick={() => openHandler(user.title)}
+            onMouseEnter={() => cursorChangeHandler('cursor--select')}
+            onMouseLeave={() => cursorChangeHandler('')}
+          />
+          <div className='description'>
+            <p className='description__header'>
+              {user.title.replace(/-/g, ' ')}
+            </p>
+            {Array.isArray(user.description) ? (
+              descriptionListFn(user)
+            ) : (
+              <p className='description__text'>{user.description}</p>
+            )}
+          </div>
+        </section>
+      ))}
       <img src={myImg} alt='Profile' className='about__img' />
     </>
-  );
+  )
 };
 
 export default Description;

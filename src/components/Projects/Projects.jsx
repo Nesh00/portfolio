@@ -1,7 +1,6 @@
 import '../../css/Projects/Projects.css';
 import { useContext, useRef, useState } from 'react';
 import { CursorContext } from '../../context/CursorContext';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { projects } from '../../data/projects';
 import SliderBtns from './SliderBtns';
 
@@ -71,32 +70,30 @@ const Projects = () => {
   };
 
   return (
-    <>
-      <section className='projects'>
-        <ul className='projects__list' ref={projectListRef}>
-          {projects.map((project) => {
-            return selectedProjects[project.id] ? (
-              showProjectDetails(project)
-            ) : (
-              <li
-                key={project.id}
-                className={`project ${project.id}`}
-                onClick={() => selectedProjectHandler(project.id)}
-                onMouseEnter={() => cursorChangeHandler('cursor--open')}
-                onMouseLeave={() => cursorChangeHandler('')}
-              >
-                {project.name}
-              </li>
-            );
-          })}
+    <section className='projects'>
+      <ul className='projects__list' ref={projectListRef}>
+        {projects.map((project) => (
+          selectedProjects[project.id] ? (
+            showProjectDetails(project)
+          ) : (
+            <li
+              key={project.id}
+              className={`project ${project.id}`}
+              onClick={() => selectedProjectHandler(project.id)}
+              onMouseEnter={() => cursorChangeHandler('cursor--open')}
+              onMouseLeave={() => cursorChangeHandler('')}
+            >
+              {project.name}
+            </li>
+          )
+        ))}
         </ul>
         <SliderBtns
           projects={projects}
           listRef={projectListRef}
           setSelectedProjects={setSelectedProjects}
         />
-      </section>
-    </>
+    </section>
   );
 };
 

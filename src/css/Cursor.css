@@ -16,7 +16,7 @@
 .cursor2 {
   width: 4rem;
   height: 4rem;
-  transition: 300ms ease-out;
+  transition: 1s ease;
   box-shadow: inset 0px 0px 1rem var(--bg-green-transparent);
 }
 

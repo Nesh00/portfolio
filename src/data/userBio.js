@@ -1,37 +1,44 @@
 export const userBio = [
   {
-    className: 'info',
+    title: 'info',
     description:
       'A full-stack developer with a result-driven mindset, time management and quick responsiveness to tasks given.',
   },
-  { className: 'name', description: 'Nenad Tsvetanovski' },
-  { className: 'location', description: 'Manchester, UK' },
+  { title: 'name', description: 'Nenad Tsvetanovski' },
+  { title: 'location', description: 'Gothenburg, Sweden' },
   {
-    className: 'focus',
+    title: 'focus',
     description:
       'Main focus is to build scalable and responsive applications that are user friendly and can be easily maintained.',
   },
   {
-    className: 'front-end',
+    title: 'front-end',
     description: [
-      'HTML',
-      'CSS/SCSS',
-      'JavaScript',
-      'Boostrap',
-      'ReactJS',
+      'TypeScript/JavaScript',
+      'ReactJS/NextJS',
+      'CSS Modules/SCSS/Less',
       'React Native/Expo',
+      'Bootstrap 4/5',
+      'HTML',
     ],
   },
   {
-    className: 'back-end',
-    description: ['NodeJS', 'ExpressJS', 'SQL/PostresQL', 'Firebase 9'],
+    title: 'back-end',
+    description: ['NodeJS', 'ExpressJS', 'SQL/PostresQL', 'Firebase 9', 'PHP', 'Symfony 4'],
   },
   {
-    className: 'testing',
-    description: ['Jest', 'Supertest'],
+    title: 'testing',
+    description: ['Jest', 'Supertest', 'React Testing Library', 'NVDA', 'VoiceOver'],
   },
   {
-    className: 'other',
-    description: ['Trello', 'Agile/SCRUM'],
+    title: 'other',
+    description: [
+      'Agile/SCRUM',
+      'Jira',
+      'BitBucket',
+      'Git/GitHub',
+      'Storybook',
+      'Confluence',
+    ],
   },
 ];
