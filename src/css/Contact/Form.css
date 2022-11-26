@@ -36,8 +36,13 @@
 }
 
 .contact__input {
-  width: 100%;
   margin-top: 0.5rem;
+  width: 100%;
+}
+
+.contact__input::-webkit-outer-spin-button,
+.contact__input::-webkit-inner-spin-button {
+  appearance: none;
 }
 
 .contact__textarea {
