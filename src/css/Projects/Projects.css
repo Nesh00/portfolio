@@ -128,6 +128,15 @@
   transform: rotateY(320deg) translateZ(40rem) translateY(-10.5rem) scale(1.5);
 }
 
+.project__name {
+  text-align: center;
+  width: 85%;
+
+  @media screen and (min-width: 76em) {
+    font-size: 1.2rem;
+  }
+}
+
 .project__links {
   display: flex;
   justify-content: space-evenly;

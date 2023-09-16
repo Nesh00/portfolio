@@ -16,19 +16,32 @@ export const userBio = [
     description: [
       'TypeScript/JavaScript',
       'ReactJS/NextJS',
-      'CSS Modules/SCSS/Less',
       'React Native/Expo',
-      'Bootstrap 4/5',
-      'HTML',
+      'CSS Modules/SCSS/Less',
+      'Bootstrap/Tailwind',
+      'HTML/Twig',
     ],
   },
   {
     title: 'back-end',
-    description: ['NodeJS', 'ExpressJS', 'SQL/PostresQL', 'Firebase 9', 'PHP', 'Symfony 4'],
+    description: [
+      'NodeJS', 
+      'ExpressJS', 
+      'SQL/PostresQL', 
+      'Firebase', 
+      'Symfony', 
+      'PHP',
+    ],
   },
   {
     title: 'testing',
-    description: ['Jest', 'Supertest', 'React Testing Library', 'NVDA', 'VoiceOver'],
+    description: [
+      'Jest', 
+      'Supertest', 
+      'React Testing Library', 
+      'NVDA', 
+      'VoiceOver',
+    ],
   },
   {
     title: 'other',

@@ -32,7 +32,7 @@ export const projects = [
   {
     id: 'project6',
     name: 'Marketplace App',
-    github: '',
+    github: 'https://github.com/Nesh00/fe-nc-marketplace/tree/main/nc-marketplace',
     liveUrl: '',
   },
   {

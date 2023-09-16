@@ -37,7 +37,7 @@ const Projects = () => {
         onMouseEnter={() => cursorChangeHandler('cursor--close')}
         onMouseLeave={() => cursorChangeHandler('')}
       >
-        {project.name}
+        <p>{project.name}</p>
         <div className='project__links'>
           <a
             href={`${project.github}`}
@@ -83,7 +83,7 @@ const Projects = () => {
               onMouseEnter={() => cursorChangeHandler('cursor--open')}
               onMouseLeave={() => cursorChangeHandler('')}
             >
-              {project.name}
+              <p className='project__name'>{project.name}</p>
             </li>
           )
         ))}

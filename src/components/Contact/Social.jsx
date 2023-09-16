@@ -56,7 +56,7 @@ const Social = () => {
       </a>
 
       <div className='contact__info'>
-        <p>07979319289</p>
+        <p>+46 720 321 830</p>
         <p>c.nenad00@gmail.com</p>
       </div>
     </section>
