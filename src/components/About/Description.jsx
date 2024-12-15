@@ -18,11 +18,26 @@ const Description = () => {
   });
 
   const openHandler = (title) => {
-    open[title] = !open[title];
+    if (open[title]) {
+      setOpen((currState) => {
+        const newState = { ...currState, [title]: !currState[title] };
+
+        return newState;
+      });
+    } else {
+      setOpen((currState) => {
+        const newState = { ...currState };
+        const keys = Object.keys(newState);
+  
+        keys.map((key) => {
+          newState[key] = false;
+        });
+  
+        newState[title] = !newState[title];
     
-    setOpen((currState) => {
-      return { ...currState };
-    });
+        return newState;
+      });
+    }
   };
 
   const descriptionListFn = (user) => {

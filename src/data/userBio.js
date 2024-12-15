@@ -5,7 +5,7 @@ export const userBio = [
       'A full-stack developer with a result-driven mindset, time management and quick responsiveness to tasks given.',
   },
   { title: 'name', description: 'Nenad Tsvetanovski' },
-  { title: 'location', description: 'Gothenburg, Sweden' },
+  { title: 'location', description: 'Manchester, UK' },
   {
     title: 'focus',
     description:
@@ -15,7 +15,7 @@ export const userBio = [
     title: 'front-end',
     description: [
       'TypeScript/JavaScript',
-      'ReactJS/NextJS',
+      'ReactJS/NextJS/Svelte',
       'React Native/Expo',
       'CSS Modules/SCSS/Less',
       'Bootstrap/Tailwind',

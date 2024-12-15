@@ -4,7 +4,7 @@ import { LoaderContext } from '../../context/LoaderContext';
 import { CursorContext } from '../../context/CursorContext';
 import '../../css/Nav/Menu.css';
 
-const listItems = ['Home', 'About', 'Projects', 'Contact'];
+const menuItems = ['Home', 'About', 'Projects', 'Contact'];
 
 const Menu = ({ changePageHandler }) => {
   const { isLoaded } = useContext(LoaderContext);
@@ -12,11 +12,11 @@ const Menu = ({ changePageHandler }) => {
 
   return (
     <ul className={`menu ${isLoaded && 'menu-red'}`}>
-      {listItems.map((listItem) => {
+      {menuItems.map((menuItem) => {
         return (
           <Link
-            to={`${listItem.toLowerCase()}`}
-            key={listItem}
+            to={`${menuItem.toLowerCase()}`}
+            key={menuItem}
             className='menu__link'
           >
             <li
@@ -25,7 +25,7 @@ const Menu = ({ changePageHandler }) => {
               onMouseEnter={() => cursorChangeHandler('cursor--select')}
               onMouseLeave={() => cursorChangeHandler('')}
             >
-              {listItem}
+              {menuItem}
             </li>
           </Link>
         );

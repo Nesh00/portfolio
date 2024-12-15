@@ -22,7 +22,7 @@ const Map = () => {
 
   return (
     <ComposableMap className='map'>
-      <ZoomableGroup zoom={counter} center={[9.5746, 57.7089]}>
+      <ZoomableGroup zoom={counter} center={[-6.844644, 54.183959]}>
         <Geographies
           geography={mapFeatures}
           fill='transparent'
@@ -35,7 +35,7 @@ const Map = () => {
             ))
           }
         </Geographies>
-        <Marker coordinates={[11.9746, 57.7089]} fill='#777'>
+        <Marker coordinates={[-2.244644, 53.483959]} fill='#777'>
           <circle r={0.3} fill={'var(--text-red)'} />
           <text
             x='6.8'
@@ -45,7 +45,7 @@ const Map = () => {
             fontSize={'.1rem'}
             fill={'var(--text-red)'}
           >
-            {'Gothenburg'}
+            {'Manchester'}
           </text>
         </Marker>
       </ZoomableGroup>

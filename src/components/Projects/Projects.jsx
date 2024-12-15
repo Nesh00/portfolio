@@ -20,10 +20,26 @@ const Projects = () => {
   });
 
   const selectedProjectHandler = (id) => {
-    selectedProjects[id] = !selectedProjects[id];
-    setSelectedProjects((currState) => {
-      return { ...currState };
-    });
+    if (selectedProjects[id]) {
+      setSelectedProjects((currState) => {
+        const newState = { ...currState, [id]: !currState[id] };
+
+        return newState;
+      });
+    } else {
+      setSelectedProjects((currState) => {
+        const newState = { ...currState };
+        const keys = Object.keys(newState);
+  
+        keys.map((key) => {
+          newState[key] = false;
+        });
+  
+        newState[id] = !newState[id];
+    
+        return newState;
+      });
+    }
   };
 
   const showProjectDetails = (project) => {
